@@ -2,6 +2,10 @@ p {
     margin: 0px 0px;
 }
 
+.p-start{
+    margin-top: 20px;
+}
+
 hr {
     margin: 14px 0px;
 }
