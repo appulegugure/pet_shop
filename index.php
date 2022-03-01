@@ -26,11 +26,11 @@ $animal_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>本日のご紹介ペット!</h1>
-    <?php foreach($animal_list as $animal_colum): ?>
-        <p><?=$animal_colum['type_v']?>の<?=$animal_colum['classification']?>ちゃん</p>
-        <p><?=$animal_colum['description']?></p>
-        <p><?=$animal_colum['birthday']?>&nbsp;生まれ</p>
-        <p>出身地&nbsp;<?=$animal_colum['birthplace']?></p>
+    <?php foreach($animal_list as $animal): ?>
+        <p><?=h($animal['type_v'])?>の<?=h($animal['classification'])?>ちゃん</p>
+        <p><?=h($animal['description'])?></p>
+        <p><?=h($animal['birthday'])?>&nbsp;生まれ</p>
+        <p>出身地&nbsp;<?=h($animal['birthplace'])?></p>
         <hr>
     <?php endforeach; ?>
 </body>
