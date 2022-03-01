@@ -19,7 +19,7 @@ $stmt->execute();
 
 $animal_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-//var_dump($members)
+
 
 ?>
 
